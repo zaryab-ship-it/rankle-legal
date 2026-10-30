@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rankle — Support</title>
+<style>
+  :root { --cream:#fff7f2; --ink:#241018; --muted:#7a606c; --coral:#ff5a36; --line:rgba(36,16,24,.08); --card:#fff; }
+  * { box-sizing: border-box; }
+  body { margin:0; background: radial-gradient(1200px 600px at 85% -5%, #ffe3d3 0%, transparent 60%), var(--cream);
+    color:var(--ink); font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width:760px; margin:0 auto; padding:64px 24px 96px; }
+  .brand { display:inline-flex; align-items:center; gap:12px; font-weight:800; letter-spacing:2px; font-size:13px; color:var(--coral); text-transform:uppercase; }
+  .mark { width:34px; height:34px; border-radius:11px; background:linear-gradient(135deg,#ff8a4c,#ff3d6e); display:grid; place-items:center; color:#fff8f3; font-weight:800; font-size:15px; }
+  h1 { font-size:clamp(32px,5vw,46px); letter-spacing:-1.4px; margin:26px 0 8px; }
+  .lede { color:var(--muted); font-size:18px; margin:0 0 30px; }
+  h2 { font-size:19px; margin:34px 0 8px; letter-spacing:-.3px; }
+  p, li { color:#3c2731; }
+  details { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:14px 18px; margin:10px 0; }
+  summary { cursor:pointer; font-weight:600; }
+  details p { margin:10px 0 2px; color:#4a3340; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:20px 22px; margin:18px 0;
+    box-shadow:0 18px 40px -28px rgba(122,34,51,.45); }
+  a { color:var(--coral); text-decoration:none; border-bottom:1px solid rgba(255,90,54,.35); }
+  footer { margin-top:44px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><span class="mark">R</span> Rankle</div>
+  <h1>Support</h1>
+  <p class="lede">Elo rankings for your pickleball crew. Most answers are below — for anything else, email us and we'll reply.</p>
+
+  <div class="card">
+    <strong>Contact</strong><br />
+    <a href="mailto:zaryababutt@gmail.com?subject=Rankle%20support">zaryababutt@gmail.com</a><br />
+    <span style="color:#7a606c;font-size:14px">Please include your group name and, if it's a data question, the invite code.</span>
+  </div>
+
+  <h2>Getting started</h2>
+  <details><summary>How do I start a group?</summary>
+    <p>Open the app, enter your name, choose <em>New group</em>, and give the group a name. You can pre-fill players from a list or add them as you go. You'll get a six-character invite code.</p>
+  </details>
+  <details><summary>How do my friends join?</summary>
+    <p>They install Rankle, tap <em>Join with code</em> on the welcome screen, and enter the code from <em>Settings → Invite a friend</em>. Everyone in the group sees the same leaderboard.</p>
+  </details>
+  <details><summary>Does it work offline?</summary>
+    <p>Yes. You can log matches without a connection — changes are queued on your device and sync when you're back online. The app shows the sync state on the home screen.</p>
+  </details>
+
+  <h2>Ratings</h2>
+  <details><summary>How is the rating calculated?</summary>
+    <p>Standard Elo. Everyone starts at 1000. Team rating is the average of the two partners. Win chance = 1 / (1 + 10^((their rating − your rating) / 400)). The change is K × margin × (result − win chance), with K = 32 and a margin multiplier of 1 + ln(1 + score difference) / 2. Both partners gain or lose the same amount.</p>
+  </details>
+  <details><summary>Why did my rating change when I edited an old match?</summary>
+    <p>Ratings aren't stored — they're recomputed from every match in order. Fixing or deleting an old game re-rates everything after it, which is what keeps the ladder honest.</p>
+  </details>
+  <details><summary>Can we change the K-factor or turn off the margin bonus?</summary>
+    <p>Yes, in <em>Settings → Rating rules</em>. Those settings belong to the whole group, and changing them re-rates all past games.</p>
+  </details>
+
+  <h2>Groups &amp; data</h2>
+  <details><summary>Someone deleted a match. Can I see who?</summary>
+    <p>Yes. <em>Settings → Group activity</em> is a server-side record of every match logged, deleted, player renamed and rule changed, with who did it and a snapshot of the deleted result. It can't be edited or cleared from the app.</p>
+  </details>
+  <details><summary>Can I get a copy of our data?</summary>
+    <p><em>Settings → Data → Export backup</em> shares a JSON file containing every player, match and setting.</p>
+  </details>
+  <details><summary>How do I leave or reset a group?</summary>
+    <p><em>Settings → Data → Remove from this device</em>. If the group uses cloud sync it stays online for everyone else; you can rejoin with the invite code.</p>
+  </details>
+
+  <h2>Account &amp; privacy</h2>
+  <details><summary>How do I delete my account and data?</summary>
+    <p><em>Settings → Privacy &amp; account → Delete my account</em>. This deletes your Rankle account, Pro entitlement, public profile and avatar, and unlinks you from every group — no email needed. Matches you logged stay on the group's record with you listed as “Former player” so the other players' ratings stay reproducible. If you cannot open the app, email us and we will delete the account for you.</p>
+  </details>
+  <details><summary>How do I get a copy of my account data?</summary>
+    <p><em>Settings → Privacy &amp; account → Export my account data</em> produces a JSON file with your account, memberships, matches you logged, blocked players and reports. The group backup under Settings → Data is a separate, group-level export.</p>
+  </details>
+  <details><summary>How do I report or block someone?</summary>
+    <p>Open the player's profile and use <em>Report</em> to send it to moderation (harassment, hate, sexual content, spam, cheating or impersonation), or <em>Block</em> to hide them from your global rankings. Reports are reviewed within 24 hours. You can see and undo blocks in <em>Settings → Privacy &amp; account → Blocked players</em>.</p>
+  </details>
+  <details><summary>Why is the app asking my age?</summary>
+    <p>Rankle is for players aged 13 and over. The age group you confirm is stored with your account so we can meet app-store and child-privacy rules. We never ask for a birth date.</p>
+  </details>
+
+  <h2>Rankle Pro &amp; subscriptions</h2>
+  <details><summary>How do I cancel or manage a subscription?</summary>
+    <p>Subscriptions are billed by Google Play or the Apple App Store, so cancel there: <a href="https://play.google.com/store/account/subscriptions?package=app.rankle.mobile" target="_blank" rel="noopener">Google Play subscriptions</a> or <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Apple subscriptions</a>. In the app, <em>Settings → Rankle Pro → Manage subscription</em> takes you straight there. Deleting the app does not cancel a subscription.</p>
+  </details>
+  <details><summary>I paid but Pro is not active.</summary>
+    <p>Tap <em>Settings → Rankle Pro → Restore</em> and make sure you are signed in with the same account you bought with. If it still does not unlock, email us with your store receipt number and we will fix it.</p>
+  </details>
+  <details><summary>Do you offer refunds?</summary>
+    <p>Refunds are handled by the store under its policy. If a purchase failed to unlock anything, contact us first — we can usually sort it out or help with the refund request.</p>
+  </details>
+
+  <footer>Rankle · <a href="./">Privacy Policy</a> · <a href="./terms.html">Terms of Service</a> · Last updated 29 October 2026</footer>
+</div>
+</body>
+</html>
